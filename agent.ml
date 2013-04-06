@@ -38,7 +38,7 @@ let step s i =
     Stack.push (f x y) s
   | Num n -> 
     Stack.push n s
-  | _ -> ()
+  | Yield -> ()
 
 let rec run agent =
   let instr = curr_instr agent in
