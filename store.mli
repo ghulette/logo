@@ -7,5 +7,6 @@ val value_as_float : value -> float
 val value_as_bool : value -> bool
 
 type t
+val make : unit -> t
 val set : string -> value -> t -> unit
 val get : string -> t -> value

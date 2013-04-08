@@ -30,6 +30,8 @@ let value_as_bool v =
 
 type t = (string, value) Hashtbl.t
 
+let make () = Hashtbl.create 10
+
 let set id v s = Hashtbl.replace s id v
 
 let get id s = Hashtbl.find s id
