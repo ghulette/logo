@@ -2,3 +2,5 @@ maml
 ._*
 *.cmi
 *.cmo
+*.cmx
+*.o
