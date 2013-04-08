@@ -1,8 +1,6 @@
-open Agent
+open Util
 
-let agent = make [|Num 5; Num 3; Binop Add; Yield|];;
-
-run agent;
-let result = Stack.pop agent.stack in
-print_int result;
-print_newline ()
+let main = 
+  let w = World.make 25 25 in
+  repeat 100 (fun () -> World.create_turtle w);
+  World.ask_turtles w Turtle.forward
