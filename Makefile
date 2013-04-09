@@ -1,5 +1,3 @@
-INCDIRS = /Users/ghulette/.sandbox/include/cairo
-LIBDIRS = /Users/ghulette/.sandbox/lib
 CLIBS   = cairo
 SOURCES = util.mli util.ml \
           array2d.mli array2d.ml \
