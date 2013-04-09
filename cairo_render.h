@@ -12,7 +12,6 @@ typedef struct {
   cairo_t *cr;
 } image_info;
 
-void test(void);
 image_info* init(int width, int height, int patch_size);
 void cleanup(image_info *info);
 void begin(image_info *info);

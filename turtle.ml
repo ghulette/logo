@@ -12,6 +12,12 @@ let make () = {
   store = Store.make ()
 }
 
+let get_x t = !(t.x)
+
+let get_y t = !(t.y)
+
+let get_angle t = !(t.angle)
+
 let set_x t x = 
   t.x := x
 

@@ -3,10 +3,6 @@
 #include <math.h>
 #include "cairo_render.h"
 
-void test(void) {
-  printf("Test\n");
-}
-
 image_info* init(int width, int height, int patch_size) {
   int w = width * patch_size;
   int h = height * patch_size;
@@ -91,28 +87,3 @@ void draw_turtle(float x, float y, float r, color c, image_info *info) {
   cairo_line_to(info->cr, -0.5,  0.5);
   cairo_fill(info->cr);
 }
-
-// int main(void) {
-//   image_info *info;
-
-//   int width = 25;
-//   int height = 25;
-//   int patch_size = 40;
-//   int x,y,i;
-
-//   info = init(width, height, patch_size);
-//   begin(info);
-  
-//   i=0;
-//   for(y=0; y < height; y++) {
-//     for(x=0; x < width; x++) {
-//       draw_patch(x, y, i%3, info);
-//       i++;
-//     }
-//   }
-//   draw_turtle(2.0,2.0,0.0,white,info);
-
-//   end(info, "image.png");
-//   cleanup(info);
-//   return 0;
-// }
