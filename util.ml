@@ -1,5 +1,5 @@
-let rec repeat n f =
-  match n with
+let rec repeat f = 
+  function
   | 0 -> ()
-  | _ -> f (); repeat (n - 1) f
-  
+  | n -> f (); repeat f (n - 1)
+

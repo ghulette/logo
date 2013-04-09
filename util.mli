@@ -1,1 +1,1 @@
-val repeat : int -> (unit -> unit) -> unit
+val repeat : (unit -> 'a) -> int -> unit
