@@ -2,14 +2,16 @@ type t = {
   width : int;
   height : int;
   patches : Patch.t Array2d.t;
-  turtles : Turtle.t list ref
+  turtles : Turtle.t list ref;
+  rinfo : Render.t;
 }
 
 let make width height = {
   width = width;
   height = height;
   patches = Array2d.init width height Patch.make;
-  turtles = ref []
+  turtles = ref [];
+  rinfo = Render.init width height 40
 }
 
 let create_turtle world = 
@@ -24,7 +26,7 @@ let ask_patches world f =
   Array2d.iter f world.patches
 
 let render world filename =
-  let info = Render.init world.width world.height 40 in
+  let info = world.rinfo in
   Render.begin_draw info;
   for y=0 to (world.height - 1) do
     for x=0 to (world.width - 1) do
